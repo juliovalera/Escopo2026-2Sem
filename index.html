@@ -1,0 +1,116 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Consulta pedagógica do segundo semestre de 2026 para Tecnologia e Inovação e Programação.">
+  <title>Central de Consulta Pedagógica | 2º semestre de 2026</title>
+  <link rel="stylesheet" href="estilos.css">
+  <script src="dados/dados.js" defer></script>
+  <script src="aplicativo.js" defer></script>
+</head>
+<body>
+  <a class="skip-link" href="#conteudo">Ir para o conteúdo principal</a>
+
+  <header class="topo">
+    <div class="limite topo-conteudo">
+      <div>
+        <p class="sobrelinha">Planejamento docente</p>
+        <h1>Central de Consulta Pedagógica</h1>
+        <p class="subtitulo">Tecnologia e Inovação e Programação · 2º semestre de 2026</p>
+      </div>
+      <div class="acessibilidade" aria-label="Controles de acessibilidade">
+        <button type="button" id="diminuirFonte" class="botao-secundario" aria-label="Diminuir tamanho da fonte">A−</button>
+        <button type="button" id="aumentarFonte" class="botao-secundario" aria-label="Aumentar tamanho da fonte">A+</button>
+        <button type="button" id="altoContraste" class="botao-secundario" aria-pressed="false">Alto contraste</button>
+      </div>
+    </div>
+  </header>
+
+  <main id="conteudo" class="limite">
+    <section class="introducao" aria-labelledby="como-usar">
+      <h2 id="como-usar">Encontre e copie o conteúdo necessário</h2>
+      <p>Use os filtros ou pesquise por título, unidade, habilidade, conteúdo ou palavra-chave. Em cada resultado, copie um campo específico ou o texto completo já organizado para o Guia de Aprendizagem.</p>
+    </section>
+
+    <section class="painel-filtros" aria-labelledby="titulo-filtros">
+      <div class="cabecalho-secao">
+        <h2 id="titulo-filtros">Filtros de pesquisa</h2>
+        <button type="button" id="limparFiltros" class="botao-link">Limpar filtros</button>
+      </div>
+
+      <div class="grade-filtros">
+        <label class="campo campo-pesquisa">
+          <span>Pesquisar</span>
+          <input id="pesquisa" type="search" placeholder="Ex.: Python, algoritmo, cultura digital..." autocomplete="off">
+        </label>
+
+        <label class="campo">
+          <span>Componente</span>
+          <select id="componente">
+            <option value="">Todos</option>
+          </select>
+        </label>
+
+        <label class="campo">
+          <span>Ano ou série</span>
+          <select id="anoSerie">
+            <option value="">Todos</option>
+          </select>
+        </label>
+
+        <label class="campo">
+          <span>Bimestre</span>
+          <select id="bimestre">
+            <option value="">3º e 4º</option>
+          </select>
+        </label>
+
+        <label class="campo">
+          <span>Semana</span>
+          <select id="semana">
+            <option value="">Todas</option>
+          </select>
+        </label>
+
+        <label class="campo">
+          <span>Unidade</span>
+          <select id="unidade">
+            <option value="">Todas</option>
+          </select>
+        </label>
+      </div>
+
+      <label class="opcao-checkbox">
+        <input id="apenasAulas" type="checkbox" checked>
+        <span>Mostrar apenas aulas com objetivos ou conteúdos</span>
+      </label>
+    </section>
+
+    <section class="barra-resultados" aria-labelledby="titulo-resultados">
+      <div>
+        <h2 id="titulo-resultados">Resultados</h2>
+        <p id="contador" role="status" aria-live="polite"></p>
+      </div>
+      <div class="acoes-lista">
+        <button type="button" id="baixarSelecao" class="botao-secundario">Baixar seleção em texto</button>
+        <button type="button" id="imprimir" class="botao-secundario">Imprimir</button>
+      </div>
+    </section>
+
+    <div id="listaResultados" class="lista-resultados"></div>
+
+    <noscript>
+      <p class="aviso">Esta página precisa do JavaScript ativado para realizar as pesquisas.</p>
+    </noscript>
+  </main>
+
+  <footer class="rodape">
+    <div class="limite">
+      <p>Dados consolidados das planilhas oficiais de escopo e sequência de 2026. Confira eventuais atualizações das fontes antes da publicação definitiva do planejamento.</p>
+    </div>
+  </footer>
+
+  <div id="mensagem" class="mensagem" role="status" aria-live="polite" aria-atomic="true"></div>
+</body>
+</html>
